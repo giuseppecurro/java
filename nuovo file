@@ -21,3 +21,4 @@ protected Scanner scan;
 protected PrintWriter out = new PrintWriter(System.out);
 /** The variable name (not used in this version) */
 protected String variable;
+//
