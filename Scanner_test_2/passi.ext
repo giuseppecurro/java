@@ -1,0 +1,18 @@
+git init
+
+git pull https://github.com/giuseppecurro/Scanner_test_2.git
+
+modifico un file....
+
+git status -s
+
+git add ScannerTest.java
+
+git commit -m "modifica minimale"
+
+
+git push https://github.com/giuseppecurro/Scanner_test_2.git 
+
+#eventualmente cambiare così: git config --global push.default matching/git config --global push.default simple
+
+

@@ -1,0 +1,24 @@
+// From ScannerTest.java
+String sampleDate = "25 Dec 1988";
+Scanner sDate = Scanner.create(sampleDate);
+int dom = sDate.nextInt( );
+String mon = sDate.next( );
+int year = sDate.nextInt( );
+
+
+import java.io.*;
+import java.util.Scanner;
+import java.util.Stack;
+/**
+* SimpleCalc -- simple calculator using 1.5 java.util.Scanner
+* @version
+$Id: ch10,v 1.5 2004/05/04 20:12:12 ian Exp $
+*/
+public class SimpleCalcScanner {
+/** The Scanner */
+protected Scanner scan;
+/** The output */
+protected PrintWriter out = new PrintWriter(System.out);
+/** The variable name (not used in this version) */
+protected String variable;
+//
