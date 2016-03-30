@@ -60,11 +60,11 @@ public class EsSwingCalculator {
                          res = valore = 0; 
                          opPrec = new String("nop");
                      } else { 
-                               if (opPrec.equals("+")) res += valore; else
-                               if (opPrec.equals("-")) res -= valore; else
-                               if (opPrec.equals("*")) res *= valore; else
-                               if (opPrec.equals("/")) res /= valore; else
-                               if (opPrec.equals("nop")) res = valore;
+                               if (opPrec.equals("+")) res += valore; 
+                               else if (opPrec.equals("-")) res -= valore; 
+                               else if (opPrec.equals("*")) res *= valore; 
+                               else if (opPrec.equals("/")) res /= valore; 
+                               else if (opPrec.equals("nop")) res = valore;
                                display.setText(""+res);
                                opPrec = operazione;
                             }
@@ -78,7 +78,7 @@ public class EsSwingCalculator {
                 CalcPanel p = new CalcPanel( );
                 c.add(p);
                 f.setSize(220,150);
-                f.addWindowListener(new  Terminator());
+                //f.addWindowListener(new  Terminator());
                 f.setVisible(true);
         }
 }
