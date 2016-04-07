@@ -26,7 +26,7 @@ class Calculator implements ActionListener {
             
             public void actionPerformed(ActionEvent e){
 
-                 int k; double max=0.0d,comodo;
+                 int k; double max=Double.MIN_VALUE,comodo;
                  Scanner s = new Scanner(display.getText());
                  String pre_str = "";           
              
@@ -62,8 +62,8 @@ class Calculator implements ActionListener {
                        if (pre_str.equals("*")){
                             pre_str="Max="+Double.toString(max);
                        }
-                       
-                       display.setText(pre_str+"  n.val.:"+k+"  Media="+res/k);
+                       String nuovo_formato=String.format("%.2f",res/k);
+                       display.setText(pre_str+"  #"+k+"  Media="+nuovo_formato);
                        s.close();
                  }
                  

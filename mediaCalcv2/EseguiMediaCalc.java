@@ -11,7 +11,7 @@ public class EseguiMediaCalc {
             Container c = f.getContentPane();
             CalcPanel p = new CalcPanel( );
             c.add(p);
-            f.setSize(480,120);
+            f.setSize(680,120);
             f.setVisible(true);
     }
 }
