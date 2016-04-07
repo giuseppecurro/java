@@ -17,10 +17,7 @@ class Calculator implements ActionListener {
             public Calculator(JTextField t) {
                 display = t;                   
             }
-            
-                  
-            
-            
+                                 
             
             public void actionPerformed(ActionEvent e){
 
@@ -28,11 +25,13 @@ class Calculator implements ActionListener {
                  Scanner s = new Scanner(display.getText());
                  String operazione = e.getActionCommand();
                  Object r = e.getSource();
-                 String pre_str = "";
+                 String pre_str = "";           
+                                 
+              
                
-                 if (operazione.equals("output del maggiore immesso")) { 
+                 if (((JRadioButton) e.getSource()).getText().equals("output del maggiore immesso")) { 
                         
-                        if (((MaxRadioButton)r).isSelected() )
+                        if (((JRadioButton)r).isSelected() )
                             pre_str="*";
                         else pre_str=""; 
                         display.setText(pre_str);
