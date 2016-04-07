@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 
       
 class CalcPanel extends JPanel {
-    JTextField txt;
+    public JTextField txt;
     CalcButton calc, canc;
     JRadioButton maxv;
    
@@ -21,7 +21,7 @@ class CalcPanel extends JPanel {
             add(txt);
             add(calc); add(canc);
             add(maxv);
-            Calculator c = new Calculator(txt);
+            Calculator c = new Calculator(txt,maxv);
             maxv.addActionListener(c);
             calc.addActionListener(c);
             canc.addActionListener(c);
