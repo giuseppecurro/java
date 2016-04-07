@@ -8,14 +8,14 @@ import java.util.*;
 public class MediaCalc {
     
         
-            static class CalcButton extends JButton {    
+            class CalcButton extends JButton {    
                 CalcButton(String n){  
                     super(n);
                     setFont(new Font("Courier",Font.BOLD,15));
                 }
             }    
         
-            static class CalcPanel extends JPanel {
+            class CalcPanel extends JPanel {
                 JTextField txt;
                 CalcButton calc, canc;
                
@@ -36,7 +36,7 @@ public class MediaCalc {
             }
             
             
-            static class Calculator implements ActionListener {
+            class Calculator implements ActionListener {
                 double res = 0; 
                 JTextField display;
                                 

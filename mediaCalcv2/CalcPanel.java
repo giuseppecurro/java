@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 class CalcPanel extends JPanel {
     JTextField txt;
     CalcButton calc, canc;
+    MaxRadioButton maxv;
    
     public CalcPanel() {
             super();
@@ -16,11 +17,12 @@ class CalcPanel extends JPanel {
             txt.setHorizontalAlignment(JTextField.RIGHT);
             calc = new CalcButton("M");
             canc = new CalcButton("C");  
-            
+            maxv = new MaxRadioButton("output del maggiore immesso");
             add(txt);
             add(calc); add(canc);
+            add(maxv);
             Calculator c = new Calculator(txt);
-
+            maxv.addActionListener(c);
             calc.addActionListener(c);
             canc.addActionListener(c);
      }

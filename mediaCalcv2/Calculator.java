@@ -18,15 +18,30 @@ class Calculator implements ActionListener {
                 display = t;                   
             }
             
+                  
+            
+            
+            
             public void actionPerformed(ActionEvent e){
 
-                 int k; 
+                 int k; double max=0.0d,comodo;
                  Scanner s = new Scanner(display.getText());
                  String operazione = e.getActionCommand();
+                 Object r = e.getSource();
+                 String pre_str = "";
+               
+                 if (operazione.equals("output del maggiore immesso")) { 
+                        
+                        if (((MaxRadioButton)r).isSelected() )
+                            pre_str="*";
+                        else pre_str=""; 
+                        display.setText(pre_str);
+                 } 
                  
                  if (operazione.equals("C")) { 
                      res = 0; 
                      display.setText("");
+                     pre_str="";
 
                  } 
                  
@@ -34,13 +49,26 @@ class Calculator implements ActionListener {
                        k=0;                                  
                        while (s.hasNext()) {
                                  if (s.hasNextDouble()){
-                                           res += s.nextDouble();
+                                           comodo = s.nextDouble();
+                                           res=res+comodo;
+                                           if (comodo>max) { 
+                                               max=comodo;
+                                           }
                                            k++;}
                                  else s.next();          
                        }
-                       display.setText("n.valori:"+k+"  Media="+res/k);
+                       
+                       
+                       if (pre_str.equals("*")){
+                            pre_str="Max=";
+                            pre_str.concat(Double.toString(max));
+                       }
+                       
+                       display.setText(pre_str+"  n.val.:"+k+"  Media="+res/k);
                        s.close();
                  }
+                 
+
             }       
 }
             
