@@ -8,7 +8,7 @@ import javax.swing.JTextField;
 
 public class Txt extends JTextField
 {
-    Font font = new Font("Courier", Font.BOLD,12);
+    Font font = new Font("Courier", Font.BOLD,14);
     Color color = Color.RED;
     
     public Txt(int s) {
@@ -16,7 +16,9 @@ public class Txt extends JTextField
         this.setFont(font);
         this.setHorizontalAlignment(JTextField.RIGHT); 
         this.setForeground(color);
+        this.setText(" ");
+        this.setCaretPosition(0);
     }
       
-    }
+}
 

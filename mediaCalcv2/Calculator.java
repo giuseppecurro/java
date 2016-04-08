@@ -16,17 +16,19 @@ class Calculator implements ActionListener {
             private  double  res = 0; 
             private  JTextField display;
             private  JRadioButton radio;
-            private  JButton b;
+            private  JLabel k_etic;
                             
-            public Calculator(JTextField t, JRadioButton r) {          
+            public Calculator(JTextField t, JRadioButton r, JLabel l) {          
                 display = t;
                 radio = r;
+                k_etic = l;
             }
                                  
             
             public void actionPerformed(ActionEvent e){
 
-                 int k; double max=Double.MIN_VALUE,comodo;
+                 int k; 
+                 double max=Double.MIN_VALUE,comodo;
                  Scanner s = new Scanner(display.getText());
                  String pre_str = "";           
              
@@ -42,6 +44,7 @@ class Calculator implements ActionListener {
                      res = 0; 
                      display.setText("");
                      pre_str="";
+                     k_etic.setText("#");
                  } 
                  
                  if (operazione.equals("M")) {
@@ -58,12 +61,13 @@ class Calculator implements ActionListener {
                              else s.next();          
                        }
                        
+                       k_etic.setText("#"+Integer.toString(k));
                        
                        if (pre_str.equals("*")){
                             pre_str="Max="+Double.toString(max);
                        }
                        String nuovo_formato=String.format("%.2f",res/k);
-                       display.setText(pre_str+"  #"+k+"  Media="+nuovo_formato);
+                       display.setText(pre_str+"  Media="+nuovo_formato);
                        s.close();
                  }
                  
