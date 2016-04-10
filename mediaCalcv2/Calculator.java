@@ -17,6 +17,7 @@ class Calculator implements ActionListener {
             Help help;
             JRadioButton radio;
             String text0 = "\n\nSeparare i dati immessi\ncon lo SPAZIO.\n\nUsare la VIRGOLA \ncon i decimali.\n"; 
+            String mess2;
   
             public Calculator(Campo_input t, JRadioButton r, Help h) {                     
                     rigo = t;
@@ -63,6 +64,7 @@ class Calculator implements ActionListener {
                              else {
                                  s.next();
                                  n++;
+                                 break;
                              }    
                        }
                        
@@ -72,7 +74,11 @@ class Calculator implements ActionListener {
                        if (mess1.equals("*")){
                             mess1="Max="+Double.toString(max);
                        }
-                       String mess2=String.format("%.2f",sommatoria/quanti);
+                       
+                       if (n==quanti) 
+                            mess2=String.format("%.2f",sommatoria/quanti);
+                       else mess2="";
+                       
                        rigo.setText(mess1+"  Media= "+mess2);
                        s.close();
                        
@@ -81,6 +87,8 @@ class Calculator implements ActionListener {
 
             }       
 }
+            
+        
             
         
 
