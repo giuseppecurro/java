@@ -3,7 +3,7 @@
 //1)Fa processare alla Scanner quanto prelevato da Jtextfield
 //2)Nel caso del pulsante "M" pigiato recupera dalla stringa i double validi ed effettua i calcoli
 //  per poi visualizzarli.
-//3)Nel caso del pulsante "C" viene effettuato un reset.
+//3)Nel caso del pulsante "C" viene effettuato un sommatoriaet.
 //4)Nel caso di settaggio del radio button viene fornita in output  l'informazione aggiuntiva del valore più alto
 //immesso.
 
@@ -13,62 +13,69 @@ import javax.swing.*;
 import java.util.*;
 
 class Calculator implements ActionListener {
-            private  double  res = 0; 
-            private  JTextField display;
-            private  JRadioButton radio;
-            private  JLabel k_etic;
-                            
-            public Calculator(JTextField t, JRadioButton r, JLabel l) {          
-                display = t;
-                radio = r;
-                k_etic = l;
-            }
-                                 
+            Campo_input rigo;
+            Help help;
+            JRadioButton radio;
+            String text0 = "\n\nSeparare i dati immessi\ncon lo SPAZIO.\n\nUsare la VIRGOLA \ncon i decimali.\n"; 
+  
+            public Calculator(Campo_input t, JRadioButton r, Help h) {                     
+                    rigo = t;
+                    radio = r;
+                    help = h; 
+            }                    
             
             public void actionPerformed(ActionEvent e){
 
-                 int k; 
-                 double max=Double.MIN_VALUE,comodo;
-                 Scanner s = new Scanner(display.getText());
-                 String pre_str = "";           
+                 int quanti,n; 
+                 double max=Double.MIN_VALUE,comodo,sommatoria=0.0d;
+
+                 Scanner  s = new Scanner(rigo.getText());
+                 String mess1 = "";   
+                 help.setText(text0);
              
                  String operazione = e.getActionCommand();
                   
                  if (operazione.equals("output del maggiore immesso"));{
                         if (radio.isSelected()) 
-                             pre_str="*";
-                        else pre_str=""; 
+                             mess1="*";
+                        else mess1=""; 
                  } 
                  
                  if (operazione.equals("C")) { 
-                     res = 0; 
-                     display.setText("");
-                     pre_str="";
-                     k_etic.setText("#");
+                     help.setBackground(Color.yellow);
+                     sommatoria = 0;                
+                     help.setText(text0);
+                     rigo.setText("");
+                     mess1="";
                  } 
                  
                  if (operazione.equals("M")) {
-                       k=0;                                  
+                       quanti=0; n=0;                                 
                        while (s.hasNext()) {
                              if (s.hasNextDouble()){
                                        comodo = s.nextDouble();
-                                       res=res+comodo;
+                                       sommatoria=sommatoria+comodo;
                                        if (comodo>max) { 
                                            max=comodo;
                                        }
-                                       k++;
+                                       quanti++;n++;
                              }
-                             else s.next();          
+                             else {
+                                 s.next();
+                                 n++;
+                             }    
                        }
                        
-                       k_etic.setText("#"+Integer.toString(k));
-                       
-                       if (pre_str.equals("*")){
-                            pre_str="Max="+Double.toString(max);
+                       if (n>quanti) {help.accoda("\n\nSCARTATI valori\n non corretti !\n");
+                                 help.setBackground(Color.red);}
+
+                       if (mess1.equals("*")){
+                            mess1="Max="+Double.toString(max);
                        }
-                       String nuovo_formato=String.format("%.2f",res/k);
-                       display.setText(pre_str+"  Media="+nuovo_formato);
+                       String mess2=String.format("%.2f",sommatoria/quanti);
+                       rigo.setText(mess1+"  Media= "+mess2);
                        s.close();
+                       
                  }
                  
 

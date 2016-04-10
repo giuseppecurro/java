@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=t\ r\ l
-comment0.target=Calculator(javax.swing.JTextField,\ javax.swing.JRadioButton,\ javax.swing.JLabel)
+comment0.params=t\ r\ h
+comment0.target=Calculator(Campo_input,\ javax.swing.JRadioButton,\ Help)
 comment1.params=e
 comment1.target=void\ actionPerformed(java.awt.event.ActionEvent)
 numComments=2

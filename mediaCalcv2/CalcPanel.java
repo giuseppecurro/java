@@ -7,36 +7,26 @@ import javax.swing.JFrame;
 
       
 class CalcPanel extends JPanel {
-    public JTextField txt;
+    Campo_input rigo;
     CalcButton calc, canc;
     JRadioButton maxv;
-    JTextArea help;
-    JLabel info;
+    Help help;
    
     public CalcPanel() {
-            super();
-            help = new JTextArea("Separare \ncon lo spazio ");
-            help.setEditable(false);help.setFont(new Font("Serif", Font.ITALIC, 10));
-            help.setForeground(Color.blue);
-            help.setBackground(Color.yellow);
-
-            txt = new Txt(60);
+            super();            
+            rigo = new Campo_input();
             calc = new CalcButton("M");
-            canc = new CalcButton("C");  
-            info = new JLabel("#");
-            maxv = new JRadioButton("output del maggiore immesso",false);
-            
+            canc = new CalcButton("C");
+            help = new Help();
             add(help);
-            add(txt);
+            maxv = new JRadioButton("output del maggiore immesso",false);           
+            add(rigo);
             add(calc); add(canc);
-            add(info);
-            add(maxv);
-            
-            Calculator c = new Calculator(txt,maxv,info);
+            add(maxv);            
+            Calculator c = new Calculator(rigo,maxv,help);
             maxv.addActionListener(c);
             calc.addActionListener(c);
             canc.addActionListener(c);
-            txt.requestFocus();
-            
+            //rigo.(JTextField) getFocused();            
     }
 }
