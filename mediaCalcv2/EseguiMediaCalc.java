@@ -1,6 +1,6 @@
 //Viene creata una finestra ed un contenitore
 //Su quest'ultimo poggia un pannello "tuttofare"
-//
+//cg10apr16
 import java.awt.*; 
 import javax.swing.*;
 

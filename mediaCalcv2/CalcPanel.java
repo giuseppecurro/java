@@ -1,4 +1,5 @@
-//Nel pannello verranno posti il textfield e due pulsanti, inoltre
+//Nel pannello verranno posti il textfield, due pulsanti, e la TextArea per
+// la messaggistica.
 //Verrà creata un'istanza della classe Calculator: c
 //I due pulsanti hanno ciascuno un ascoltatore: proviene da c,Calculator
 import java.awt.*; 
@@ -26,7 +27,6 @@ class CalcPanel extends JPanel {
             Calculator c = new Calculator(rigo,maxv,help);
             maxv.addActionListener(c);
             calc.addActionListener(c);
-            canc.addActionListener(c);
-            //rigo.(JTextField) getFocused();            
+            canc.addActionListener(c);                      
     }
 }
