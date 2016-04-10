@@ -1,18 +1,18 @@
 #BlueJ package file
 objectbench.height=76
-objectbench.width=695
+objectbench.width=686
 package.editor.height=400
 package.editor.width=560
-package.editor.x=30
-package.editor.y=33
+package.editor.x=50
+package.editor.y=53
 package.numDependencies=0
 package.numTargets=1
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
-target1.editor.height=843
-target1.editor.width=1446
-target1.editor.x=-3
+target1.editor.height=841
+target1.editor.width=900
+target1.editor.x=70
 target1.editor.y=33
 target1.height=50
 target1.name=ScannerTest
