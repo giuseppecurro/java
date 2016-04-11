@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ init()
+comment1.params=
+comment1.target=void\ start()
+comment1.text=\n\ Richiamato\ dal\ browser\ o\ dall'appletviewer\ per\ informare\ il\ JApplet\ che\n\ dovrebbe\ essere\ avviata\ l'esecuzione.\ E'\ richiamato\ dopo\ il\ metodo\ init\n\ e\ ogni\ volta\ che\ il\ JApplet\ \u00E8\ caricato\ in\ una\ pagina\ Web.\n
+comment2.params=
+comment2.target=void\ stop()
+comment3.params=
+comment3.target=void\ destroy()
+comment4.params=
+comment4.target=java.lang.String\ getAppletInfo()
+comment5.params=v
+comment5.target=void\ main(java.lang.String[])
+numComments=6
