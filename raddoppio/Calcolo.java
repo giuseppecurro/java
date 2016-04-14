@@ -19,8 +19,13 @@ class Calcolo implements ActionListener {
         String operazione = e.getActionCommand();
         
         if (operazione.equals("doppio")){
-            d=(Double.parseDouble(tf.getText() )) *2.0;
-            s=Double.toString(d);
+            try {
+                d=(Double.parseDouble(tf.getText() )) *2.0;
+                s=Double.toString(d);}
+            catch  ( NumberFormatException no_double ) {
+                s="errore";
+            }    
+           
             tf.setText(s);
         }
 
