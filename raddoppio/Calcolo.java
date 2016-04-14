@@ -9,9 +9,9 @@ class Calcolo implements ActionListener {
     Double       d;
     String       s;
     
-    public Calcolo(JTextField tf1,  JButton b1) {
-       tf=  tf1;
-       b=   b1;
+    public Calcolo(JTextField tf,  JButton b) {
+       this.tf=  tf;
+       this.b=   b;
     }
     
     public void actionPerformed(ActionEvent e){
