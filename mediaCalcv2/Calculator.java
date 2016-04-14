@@ -19,10 +19,10 @@ class Calculator implements ActionListener {
             String text0 = "\n\nSeparare i dati immessi\ncon lo SPAZIO.\n\nUsare la VIRGOLA \ncon i decimali.\n"; 
             String mess2;
   
-            public Calculator(Campo_input t, JRadioButton r, Help h) {                     
-                    rigo = t;
-                    radio = r;
-                    help = h; 
+            public Calculator(Campo_input rigo, JRadioButton radio, Help help) {                     
+                    this.radio = radio;
+                    this.help = help; 
+                    this.rigo =  rigo;
             }                    
             
             public void actionPerformed(ActionEvent e){

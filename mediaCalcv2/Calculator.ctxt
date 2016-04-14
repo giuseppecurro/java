@@ -1,5 +1,5 @@
 #BlueJ class context
-comment0.params=t\ r\ h
+comment0.params=rigo\ radio\ help
 comment0.target=Calculator(Campo_input,\ javax.swing.JRadioButton,\ Help)
 comment1.params=e
 comment1.target=void\ actionPerformed(java.awt.event.ActionEvent)
