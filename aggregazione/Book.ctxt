@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=n\ p\ at
+comment0.target=Book(java.lang.String,\ int,\ Author)
+comment1.params=
+comment1.target=void\ showDetail()
+numComments=2
