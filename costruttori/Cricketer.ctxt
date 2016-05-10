@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Cricketer()
+comment1.params=n\ t\ a
+comment1.target=Cricketer(java.lang.String,\ java.lang.String,\ int)
+comment2.params=ckt
+comment2.target=Cricketer(Cricketer)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4
