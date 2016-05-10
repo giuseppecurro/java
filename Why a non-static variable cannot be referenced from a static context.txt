@@ -1,0 +1,32 @@
+ERRORE FREQUENTISSIMO:
+
+Why a non-static variable cannot be referenced from a static context ?
+======================================================================
+When you try to access a non­static variable from a static context like main method, java compiler throws a message like "a non­static variable cannot
+be referenced from a static context". This is because non­static variables are related with instance of class(object) and they get created when instance
+of a class is created by using new operator. So if you try to access a non­static variable without any instance compiler will complain because those
+variables are not yet created and they don't have any existence until an instance is created and associated with it.
+Example of accessing non­static variable from a static context
+class Test 
+{ 
+ int x; 
+ public static void main(String[] args) 
+ { 
+  x=10; 
+ } 
+} 
+Output
+compiler error: non­static variable count cannot be referenced from a static context
+
+VA SVOLTO COSI'
+===============
+Same example using instance of class
+class Test 
+{ 
+ int x; 
+ public static void main(String[] args) 
+ { 
+  Test tt=new Test(); 
+  tt.x=10;  //works fine with instance of class 
+ } 
+} 
