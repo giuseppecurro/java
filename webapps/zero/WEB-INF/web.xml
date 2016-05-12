@@ -1,0 +1,16 @@
+<web-app>
+        <servlet>
+        <servlet-name>Saluto</servlet-name>
+        <servlet-class>Saluto</servlet-class>
+    </servlet>
+    
+<servlet-mapping>
+        <servlet-name>Saluto</servlet-name>
+        <url-pattern>/Saluto</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        </welcome-file-list>
+</web-app>
+

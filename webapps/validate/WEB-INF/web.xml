@@ -1,0 +1,22 @@
+<web-app>
+    <servlet>
+        <servlet-name>Validate</servlet-name>
+        <servlet-class>Validate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Welcome</servlet-name>
+        <servlet-class>Welcome</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Validate</servlet-name>
+        <url-pattern>/Validate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Welcome</servlet-name>
+        <url-pattern>/Welcome</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        </welcome-file-list>
+</web-app>
+

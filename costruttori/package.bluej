@@ -7,7 +7,11 @@ objectbench.width=1254
 package.editor.height=788
 package.editor.width=1128
 package.editor.x=0
+<<<<<<< HEAD
 package.editor.y=30
+=======
+package.editor.y=45
+>>>>>>> beta
 package.numDependencies=1
 package.numTargets=2
 package.showExtends=true
