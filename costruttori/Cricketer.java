@@ -24,9 +24,14 @@ class Cricketer {
           age = ckt.age; 
          } 
          
+         //All Java objects have a toString() method, 
+         //which is invoked when you try and print the object.
+         //http://stackoverflow.com/questions/29140402/
+         ///how-do-i-print-my-java-object-without-getting-sometype2f92e0f4
+         
          public String toString()  
          { 
-          return "this is " + name + " of "+team; 
+          return "this is " + name + " of "+team; //invokes myObject.toString() 
          } 
 } 
  
